@@ -42,8 +42,10 @@ function handleClick(ev) {
 
 const getNumber = () => {
  
-  const userValue = user.value;
-
+  const userValue = parseInt(user.value);
+    if (userValue > 100 ){
+        clue.innerHTML = "El numero debe estar entre 1 y 100"
+    }
     if (userValue> random ) {
         clue.innerHTML = "Demasiado alto"
     } 
@@ -53,10 +55,8 @@ const getNumber = () => {
     else if (userValue === random) {
         clue.innerHTML = "Has ganado campeona"
     }
-    else if (userValue>100) {
-        clue.innerHTML = "El numero debe estar entre 1 y 100"
-    }
-   ;}
+    
+}
 
 
   
