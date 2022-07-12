@@ -4,6 +4,11 @@ const btn = document.querySelector('.js-btn');
 
 const clue= document.querySelector('.js-clue');
 const total= document.querySelector('.js-total');
+const tries= document.querySelector('.js-tries');
+
+
+
+
 
 
 const random= getRandomNumber(100);
@@ -18,9 +23,7 @@ function getRandomNumber(max) {
 function handleClick(ev) {
     ev.preventDefault();
     getNumber();
-    updateNumber();
-   
-    
+    updateNumber(); 
   }
    btn.addEventListener('click', handleClick);
 
@@ -29,31 +32,34 @@ function handleClick(ev) {
 
 
 //funcion para sumar el total de intentos
-   let sumTotal = 0;
-  
    
- //funcion para recoger el valor que intruduce el usuario
+  
+  let sumTotal = 0;
+ //funcion para recoger el valor que intruduce el usuario(la que yo hice(no modificaba solo el numero sino todo el texto...añadir etiqueta span en html))
    function updateNumber() {
     sumTotal = sumTotal + 1;
-   total.innerHTML = sumTotal
-  }
+   tries.innerHTML = sumTotal
+}
+
 
 //condicional
 
-const getNumber = () => {
+
+ const getNumber = () => {
  
-  const userValue = parseInt(user.value);
-    if (userValue > 100 ){
-        clue.innerHTML = "El numero debe estar entre 1 y 100"
+ const userValue = parseInt(user.value);
+   
+ if (userValue > 100 ){
+        clue.innerHTML = "El numero debe estar entre 1 y 100";
     }
-    if (userValue> random ) {
-        clue.innerHTML = "Demasiado alto"
+    else if (userValue> random ) {
+        clue.innerHTML = "Demasiado alto";
     } 
     else if (userValue< random) {
-        clue.innerHTML = "Demasiado bajo"
+        clue.innerHTML = "Demasiado bajo";
     }
     else if (userValue === random) {
-        clue.innerHTML = "Has ganado campeona"
+        clue.innerHTML = "Has ganado campeona";
     }
     
 }
