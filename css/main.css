@@ -1,0 +1,108 @@
+body {
+    margin: 250px 0 0 0;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/168/305/non_2x/realistic-math-chalkboard-background-illustration-free-vector.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 32px;
+  }
+  
+  form {
+    display: inline-block;
+  }
+  
+  label {
+    font-size: 1.2rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #3c96a4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color:#7ef086;
+  }
+  
+  .js-clue,
+  .js-total {
+    margin-top: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .js-clue {
+    color: #f07e91;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .js-total:hover {
+ 
+    font-size:1.3rem ;
+  }
+  
+  .js-total {  
+     color: #7ef086;
+
+    font-weight: bold;
+  }
+  
+  .js-tries {
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    main {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1rem;
+    }
+    .js-clue,
+    .js-total {
+      font-size: 1rem;
+    }
+  }
+  
+
+  
+  @media screen and (max-width: 414px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+    .js-clue,
+    .js-total {
+      font-size: 0.8rem;
+    }
+  }
+  
