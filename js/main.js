@@ -29,6 +29,16 @@ function updateNumber() {
   sumTotal = sumTotal + 1;
   tries.innerHTML = sumTotal;
 }
+const resetGame = () => {
+  sumTotal = 0;
+  tries.innerHTML = sumTotal;
+  clue.innerHTML = "Escribe un número y dale a Prueba";
+  random = getRandomNumber(100);
+  console.log(random);
+};
+
+const resetBtn = document.querySelector(".js-reset");
+resetBtn.addEventListener("click", resetGame);
 
 //condicional
 
